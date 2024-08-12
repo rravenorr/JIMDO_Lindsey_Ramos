@@ -3,6 +3,7 @@
     display: flex;
     height: 90px;
     padding-left: 152px;
+    padding-right: 170px;
 }
 
 .header-main-box{
@@ -46,7 +47,7 @@
 .sign-holder{
     height: 100%;
     width: 384px;
-    justify-self: flex-end
+    justify-self: flex-end;
 }
 
 @media screen () {
