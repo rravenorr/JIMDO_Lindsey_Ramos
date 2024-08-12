@@ -1,0 +1,54 @@
+#header1{
+    flex: 1;
+    display: flex;
+    height: 90px;
+    padding-left: 152px;
+}
+
+.header-main-box{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 0 40px;
+    gap: 40px;
+    align-items: start;
+}
+
+.logo-holder{
+    height: 100%;
+    min-width: 220px;
+}
+
+.directions-holder{
+    height: 100%;
+    min-width: 740px;
+    display: flex;
+    gap: 48px;
+    margin-right: 96px;
+}
+
+.website-holder{
+    min-width: 97px;
+}
+
+.store-holder{
+    min-width: 129px;
+}
+
+.business-holder{
+    min-width: 145px;
+}
+
+.directions-holder * {
+    width: 97px;
+}
+
+.sign-holder{
+    height: 100%;
+    width: 384px;
+    justify-self: flex-end
+}
+
+@media screen () {
+    
+}
