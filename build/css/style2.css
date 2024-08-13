@@ -1,55 +1,101 @@
-#header1{
-    flex: 1;
-    display: flex;
-    height: 90px;
-    padding-left: 152px;
-    padding-right: 170px;
+*{
+    font-family: 'Euclid Circular A', sans-serif;
 }
 
-.header-main-box{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    padding: 0 40px;
+#main-header2{
     gap: 40px;
-    align-items: start;
+    max-width: 1600px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 90px;  
 }
 
-.logo-holder{
-    height: 100%;
-    min-width: 220px;
+#group1{
+    max-width: 220px;
+    flex: 1;
 }
 
-.directions-holder{
-    height: 100%;
-    min-width: 740px;
-    display: flex;
+#group2{
+    max-width: 740px;
     gap: 48px;
-    margin-right: 96px;
+    flex: 1;
 }
 
-.website-holder{
-    min-width: 97px;
+#group3{
+    max-width: 384px;
+    flex: 1;
 }
 
-.store-holder{
-    min-width: 129px;
+#jimdo-logo{
+    height: 38px;
+    width: 103px;
+    border-style: solid;
+    border-width: 3px;
+    border-right-width: 2px;
+    border-color: #010334;
 }
 
-.business-holder{
-    min-width: 145px;
+#logo-holder{
+    display: flex;
+    overflow: hidden;
+    height: 90px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
-.directions-holder * {
-    width: 97px;
+#drp-holder1{
+    max-width: 97px;
+    flex: 1;
+    color:  #001453;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    font-size: 15px;
 }
 
-.sign-holder{
-    height: 100%;
-    width: 384px;
-    justify-self: flex-end;
+#drp-holder2{
+    max-width: 129px;
+    flex: 1;
+    padding: 6px;
+    color:  #001453;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    font-size: 15px;
+}
+#drp-holder3{
+    max-width: 145px;
+    flex: 1;
+    padding: 6px;
+    color:  #001453;
+    padding: 6px;
+    font-size: 15px;
 }
 
-@media screen () {
+#main-content1{
+    max-width: 1600px;
+    min-height: 570px;
+}
+
+#title-holder1{
+    min-height: 411px;
+    max-height: 411px;
+    max-width: 610px;
+}
+
+#start-now{
+    max-width: 380px;
+    min-height: 60px;
+    flex: 1;
+}
+
+#title-sub-holder{
+    min-height: 148px;
+}
+
+#image-holder2{
     
 }
