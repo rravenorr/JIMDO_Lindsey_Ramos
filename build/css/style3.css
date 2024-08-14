@@ -1,68 +1,8 @@
-
-.carousel-frame {
-    position: relative;
-    width: 700px;
-
-    margin: 10px auto;
-    background-color: white;
-  }
-  
-  .carousel-slide {
-    display: flex;
-    mix-blend-mode: multiply;
-  }
-  
-  .carousel-slide img {
+#carrousel-frame{
     max-width: 700px;
-    object-fit: cover;
-    padding-right: 10px;
-  }
-  
-  .carousel-prev {
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    margin-top: -15px;
-    z-index: 10;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.8);
-    cursor: pointer;
-  }
-  
-  .carousel-next {
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    margin-top: -15px;
-    z-index: 10;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.8);
-    cursor: pointer;
-  }
-  
-  .carousel-dots {
-    
-    max-width: 650px;
-    list-style: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 5%;
-    margin: 0 auto;
-    width: max(100px, 15%);
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .carousel-dots li {
-    width: 8px;
-    height: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  }
-  
-  .carousel-dots .active-dot {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
+    transition: 1s;
+}
+
+#carrousel-frame img{
+    max-width: 700px;
+}

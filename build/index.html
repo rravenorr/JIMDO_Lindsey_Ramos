@@ -405,168 +405,69 @@
         <div class="mb-10	">
             <h2 class="text-5xl text-center leading-tight		">Get portfolio design inspiration with these examples  
             </h2>
+            
         </div>
-        
-        <div class="carousel-frame">
-            <div class="carousel-slide">
-              <img src="/img/website-1.webp" />
-              <img src="/img/website-11.webp" />
-              <img src="/img/website-12.webp" />
-              <img src="/img/website-13.webp" />
-              <img src="/img/website-14.webp" />
-
+        <div>
+        <p class="text-xl pb-5 mb-16">Artists ♡ Jimdo! Spark your creativity with these website portfolio examples built with Jimdo.
+        </p>
+        <div></div>
+    </div>
+        <div class="flex border-slate-600 border" id="carrousel-holder">
+            <div id="carrousel-frame" class="flex">
+                <!-- <div>
+                    <img src="/img/website-13.webp" alt="" id="img3">
+                </div>
+                <div>
+                    <img src="/img/website-14.webp" alt="" id="img4">
+                </div>
+            <div>
+                <img src="/img/website-1.webp" alt="" id="img0">
             </div>
-            <i class="carousel-prev fas fa-chevron-left"></i>
-            <i class="carousel-next fas fa-chevron-right"></i>
-            <ol class="carousel-dots">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ol>
-          </div>
+            <div>
+                <img src="/img/website-11.webp" alt="" id="img1">
+            </div>
+            <div>
+                <img src="/img/website-12.webp" alt="" id="img2">
+            </div> -->
+            
+            <div class="imagesloop flex"></div>
+        </div>
+        </div>
+        <div class="p-10">
+        <button class="border-4 border-black w-16" onclick="backward()"><</button>
+        <button class="border-4 border-black w-16" onclick="forward()" >></button>
+    </div>
 
 
     </section>
         
     <script>
-        const carouselFrames = Array.from(document.querySelectorAll('.carousel-frame'));
+        var images = 0;
+        document.getElementById("carrousel-frame").style.transform = `translateX(-${700 * images}px)`;
+        function forward(){
+            images++;
+            document.getElementById("carrousel-frame").style.transform = `translateX(-${700 * images}px)`;
+            console.log(images);
+            growCard();
+        }
+        function backward(){
+            images--;
+            document.getElementById("carrousel-frame").style.transform = `translateX(-${700 * images}px)`;   
+            console.log(images);
+            growCard();
+        }
+        function growCard(imgNo){
+            document.getElementById("img" + images).style.transform = `scale(1)`;
+        }
 
-function makeCarousel(frame) {
-  const carouselSlide = frame.querySelector('.carousel-slide');
-  const carouselImages = getImagesPlusClones();
-  const prevBtn = frame.querySelector('.carousel-prev');
-  const nextBtn = frame.querySelector('.carousel-next');
-  const navDots = Array.from(frame.querySelectorAll('.carousel-dots li'));
 
-  let imageCounter = 1;
 
-  function getImagesPlusClones() {
-    let images = frame.querySelectorAll('.carousel-slide img');
-
-    const firstClone = images[0].cloneNode();
-    const lastClone = images[images.length - 1].cloneNode();
-
-    firstClone.className = 'first-clone';
-    lastClone.className = 'last-clone';
-
-    // we need clones to make an infinite loop effect
-    carouselSlide.append(firstClone);
-    carouselSlide.prepend(lastClone);
-
-    // must reassign images to include the newly cloned images
-    images = frame.querySelectorAll('.carousel-slide img');
-
-    return images;
-  }
-
-  function initializeNavDots() {
-    if (navDots.length) navDots[0].classList.add('active-dot');
-  }
-
-  function initializeCarousel() {
-    carouselSlide.style.transform = 'translateX(-700px)';
-  }
-
-  function slideForward() {
-    // first limit counter to prevent fast-change bugs
-    if (imageCounter >= carouselImages.length - 1) return;
-    carouselSlide.style.transition = 'transform 400ms';
-    imageCounter++;
-    carouselSlide.style.transform = `translateX(-${400 * imageCounter}px)`;
-  }
-
-  function slideBack() {
-    // first limit counter to prevent fast-change bugs
-    if (imageCounter <= 0) return;
-    carouselSlide.style.transition = 'transform 400ms';
-    imageCounter--;
-    carouselSlide.style.transform = `translateX(-${400 * imageCounter}%)`;
-  }
-
-  function makeLoop() {
-    // instantly move from clones to originals to produce 'infinite-loop' effect
-    if (carouselImages[imageCounter].classList.contains('last-clone')) {
-      carouselSlide.style.transition = 'none';
-      imageCounter = carouselImages.length - 2;
-      carouselSlide.style.transform = `translateX(-${400 * imageCounter}px)`;
-    }
-
-    if (carouselImages[imageCounter].classList.contains('first-clone')) {
-      carouselSlide.style.transition = 'none';
-      imageCounter = carouselImages.length - imageCounter;
-      carouselSlide.style.transform = `translateX(-${400 * imageCounter}px)`;
-    }
-  }
-
-  function goToImage(e) {
-    carouselSlide.style.transition = 'transform 400ms';
-    imageCounter = 1 + navDots.indexOf(e.target);
-    carouselSlide.style.transform = `translateX(-${700 * imageCounter}px)`;
-  }
-
-  function highlightCurrentDot() {
-    navDots.forEach((dot) => {
-      if (navDots.indexOf(dot) === imageCounter - 1) {
-        dot.classList.add('active-dot');
-      } else {
-        dot.classList.remove('active-dot');
-      }
-    });
-  }
-
-  function addBtnListeners() {
-    nextBtn.addEventListener('click', slideForward);
-    prevBtn.addEventListener('click', slideBack);
-  }
-
-  function addNavDotListeners() {
-    navDots.forEach((dot) => {
-      dot.addEventListener('click', goToImage);
-    });
-  }
-
-  function addTransitionListener() {
-    carouselSlide.addEventListener('transitionend', () => {
-      makeLoop();
-      highlightCurrentDot();
-    });
-  }
-
-  function autoAdvance() {
-    let play = setInterval(slideForward, 5000);
-
-    frame.addEventListener('mouseover', () => {
-      clearInterval(play); // pause when mouse enters carousel
-    });
-
-    frame.addEventListener('mouseout', () => {
-      play = setInterval(slideForward, 5000); // resume when mouse leaves carousel
-    });
-
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        clearInterval(play); // pause when user leaves page
-      } else {
-        play = setInterval(slideForward, 5000); // resume when user returns to page
-      }
-    });
-  }
-
-  function buildCarousel() {
-    initializeCarousel();
-    initializeNavDots();
-    addNavDotListeners();
-    addBtnListeners();
-    addTransitionListener();
-    // autoAdvance();
-  }
-
-  buildCarousel();
-}
-
-carouselFrames.forEach(frame => makeCarousel(frame));
+        const imageList = ["/img/website-1.webp", "/img/website-11.webp", "/img/website-12.webp", "/img/website-13.webp", "/img/website-14.webp"];
+        for (let x = 0; x < imageList.length; x++) {            
+            const element = '<img src="' + imageList[x] + '">'
+            document.querySelector('.imagesloop').innerHTML += element;
+            // imageList.push(imageList[x]);
+        }
     </script>
 </body>
 </html>
