@@ -226,5 +226,25 @@
 }
 
 .page-standard{
-    min-width: 1600px;
+    max-width: 1600px;
+}
+
+.button-holder button{
+    border-style: solid;
+    border-color: #004ced;
+    border-width: 2px;
+    height: 96px;
+    display: flex;
+}
+.button-holder p{
+    border-style: solid;
+    border-color: #ab00df;
+    border-width: 2px;
+    font-size: 16px;
+
+}
+.p-holder{
+    height: 0px;
+    overflow: hidden;    /* Hide overflow if needed */
+    text-overflow: ellipsis;
 }
