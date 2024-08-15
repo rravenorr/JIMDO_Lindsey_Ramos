@@ -450,9 +450,11 @@
         <div class="flex page-standard grow">
             <div class="flex flex-col button-holder grow px-44 text-left">
                 <div class="flex flex-col">
-                    <button class="flex grow" onclick="ac-1">
-                        <h3 class="text-2xl font-medium">What are the benifits of an online portfolio?</h3>
-                    </button>
+                    <div>
+                        <button class="flex grow" onclick="ac1()">
+                            <h3 class="text-2xl font-medium">What are the benifits of an online portfolio?</h3>
+                        </button>
+                    </div>
                     <div class="p-holder" id="p-1">
                     <p>Creating an online portfolio is one of the best ways to show off your best work, all in one place. Even if you’re already using different social media accounts, putting your portfolio online gives you an online hub for potential clients, customers, agencies, and recruiters to see what you can do. It’s all on a platform you control, no matter how social media trends change. Plus, you can customize your design exactly how you want it.
                     </p>
@@ -460,9 +462,11 @@
                 </div>
 
                 <div class="flex flex-col">
-                    <button>
+                    <div>
+                    <button onclick="ac2()">
                         <h3 class="text-2xl font-medium">How do I make a good porfolio website?</h3>
                     </button>
+                </div>
                     <div class="p-holder" id="p-2">
                     <p>Fortunately with Jimdo, most of the portfolio creation is already done for you! The best way to create a good online portfolio is to start with a custom domain. That shows the world that you take your project seriously and professionally. Once you put your portfolio online, make sure you use high-quality images, and choose a high-impact image for the header of your homepage to grab people’s attention. In addition to design, be sure to take a few minutes to optimize your site for search engines (Jimdo will walk you through how to do that). That way, your portfolio will start showing up in search engines for the right audience, and your traffic will grow.
                     </p>
@@ -470,9 +474,11 @@
                 </div>
 
                 <div class="flex flex-col">
-                    <button>
+                    <div>
+                    <button onclick="ac3()">
                         <h3 class="text-2xl font-medium">What should I put in my online portfolio?</h3>
                     </button>
+                    </div>
                     <div class="p-holder" id="p-3">
                         <p>A good portfolio website doesn’t have to be complicated. It’s a good idea to include a short bio and headshot on your About page, as well as any relevant skills or experience. Then, you can have some fun putting together the visuals on your site, either in a slide show or just by placing the images on your web pages. When you do this, try to choose just your best work. Don’t post everything you’ve ever done—be picky and keep in mind that many online visitors have short attention spans and don’t want to browse through years of your work. You can also easily add a contact form so visitors know how to get in touch with you.
                         </p>
@@ -480,9 +486,11 @@
                 </div>
 
                 <div class="flex flex-col">
-                    <button>
+                    <div>
+                    <button onclick="ac4()">
                         <h3 class="text-2xl font-medium">Why is an online portfolio important for a designer?</h3>
                     </button>
+                </div>
                     <div class="p-holder" id="p-4">
                     <p>When you’re a designer, visuals are a huge part of the story. An online portfolio helps you go beyond a paper resume and portfolio and really start attracting the attention of hiring managers and potential customers. By putting your designer portfolio online, you can show off all sorts of work beyond print—including video, multimedia, and more. It’s also a good way to let your personality shine through and share your photography, modeling shots, or graphic design work in a more personal way.
                     </p>
@@ -490,9 +498,11 @@
                 </div>
 
                 <div class="flex flex-col">
-                    <button>
+                    <div>
+                    <button onclick="ac5()">
                         <h3 class="text-2xl font-medium"> how do I choose the right design for my portfolio website?</h3>
                     </button>
+                </div>
                     <div class="p-holder" id="p-5">
                     <p>The best portfolio website designs and templates are clean, modern, and show off your work without distractions. When you sign up for Jimdo, you’ll be able to pick a style that fits you, and then the design of the website is taken care of! Once you create your online portfolio, you can tweak it and customize it as you like, but all the heavy lifting is done for you. So you can spend more time on your actual work, and less time laboring over your website.
                     </p>
@@ -502,8 +512,64 @@
         </div>
     </section>
     <script>
-        
+        let p1 = document.getElementById("p-1");
+        let p2 = document.getElementById("p-2");
+        let p3 = document.getElementById("p-3");
+        let p4 = document.getElementById("p-4");
+        let p5 = document.getElementById("p-5");
 
+        let p1s = 0;
+        let p2s = 0;
+        let p3s = 0;
+        let p4s = 0;
+        let p5s = 0;
+
+        function ac1(){
+            if (p1s == 0){
+                p1.style.height = "max-content";
+                p1s=1;
+            }else{
+                p1.style.height = "0px";
+                p1s=0;
+            } 
+        }
+
+        function ac2(){
+            if (p2s == 0){
+                p2.style.height = "max-content";
+                p2s=1;
+            }else{
+                p2.style.height = "0px";
+                p2s=0;
+            } 
+        }
+        function ac3(){
+            if (p3s == 0){
+                p3.style.height = "max-content";
+                p3s=1;
+            }else{
+                p3.style.height = "0px";
+                p3s=0;
+            } 
+        }
+        function ac4(){
+            if (p4s == 0){
+                p4.style.height = "max-content";
+                p4s=1;
+            }else{
+                p4.style.height = "0px";
+                p4s=0;
+            } 
+        }
+        function ac5(){
+            if (p5s == 0){
+                p5.style.height = "max-content";
+                p5s=1;
+            }else{
+                p5.style.height = "0px";
+                p5s=0;
+            } 
+        }
         const carouselFrames = Array.from(document.querySelectorAll('.carousel-holder'));
         
 
