@@ -76,8 +76,8 @@
 }
 
 #main-content1{
-    max-width: 1600px;
     min-height: 570px;
+    flex-direction: column;
 }
 
 #title-holder1{
@@ -97,8 +97,8 @@
 }
 
 #image-holder2{
-    width: 740px;
-    height: 490px;
+    max-width: 740px;
+    max-height: 490px;
 }
 
 #drp-holder4{
@@ -173,7 +173,36 @@
 }
 
 #start-now1{
-    min-width: 250px;
+    max-width: 250px;
     min-height: 60px;
 }
 
+@media (max-width:1000px){
+    #heading2{
+        display: none;
+    }
+    #main-content1{
+        flex-direction: column;
+    }
+    #createOP{
+        font-size: 20px;
+    }
+    #image-holder2{
+        display: flex;
+    }
+    #steplist{
+        display: none;
+    }
+    .sec2-pager{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sec2-img{
+        padding: 0px;
+        flex: 1;
+    }
+    .sec2-content-holder{
+        padding: 0;
+    }
+
+}

@@ -31,7 +31,10 @@
 
 }
 
-@media (max-width:800px){
+@media (max-width:1000px){
+    #heading2{
+        display: none;
+    }
     #main-content1{
         flex-direction: column;
     }
@@ -39,6 +42,22 @@
         font-size: 20px;
     }
     #image-holder2{
-        width: 90vw;
+        display: flex;
     }
+    #steplist{
+        display: none;
+    }
+    .sec2-pager{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sec2-img{
+        padding: 0px;
+        flex: 1;
+    }
+    .sec2-content-holder{
+        padding: 0;
+    }
+
 }
+
