@@ -1,5 +1,5 @@
 .carousel-frame{
-    width: 700px;
+    max-width: 700px;
     mix-blend-mode: multiply;
     align-items: center;
 
@@ -31,33 +31,11 @@
 
 }
 
-@media (max-width:1000px){
-    #heading2{
-        display: none;
-    }
-    #main-content1{
-        flex-direction: column;
-    }
-    #createOP{
-        font-size: 20px;
-    }
-    #image-holder2{
-        display: flex;
-    }
-    #steplist{
-        display: none;
-    }
-    .sec2-pager{
-        flex-direction: column;
-        justify-content: center;
-    }
-    .sec2-img{
-        padding: 0px;
-        flex: 1;
-    }
-    .sec2-content-holder{
-        padding: 0;
-    }
+.sec4-holder{
+    max-width: 610px;
+}
 
+.card-210{
+    max-width: 610px;
 }
 
