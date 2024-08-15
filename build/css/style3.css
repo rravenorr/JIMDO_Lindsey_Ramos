@@ -1,8 +1,44 @@
-#carrousel-frame{
-    max-width: 700px;
-    transition: 1s;
+.carousel-frame{
+    width: 700px;
+    mix-blend-mode: multiply;
+    align-items: center;
+
 }
 
-#carrousel-frame img{
+.carousel-holder{
+
+}
+
+.carousel-frame img{
     max-width: 700px;
+    transform: scale(0.85);
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.carousel-prev{
+
+    left: 0px;
+    height: 42px;
+    width: 42px;
+
+}
+.carousel-next{
+    right: 0px;
+
+    height: 42px;
+    width: 42px;
+
+}
+
+@media (max-width:800px){
+    #main-content1{
+        flex-direction: column;
+    }
+    #createOP{
+        font-size: 20px;
+    }
+    #image-holder2{
+        width: 90vw;
+    }
 }
