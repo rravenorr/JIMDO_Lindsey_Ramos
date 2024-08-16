@@ -226,7 +226,7 @@
 }
 
 .page-standard{
-    max-width: 1600px;
+    width: 1600px;
 }
 
 .button-holder button{
@@ -245,4 +245,102 @@
     text-overflow: ellipsis;
     transition: 0.5s;
     max-width: 882px;
+}
+.swiper {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-wrapper{
+    /* border-width: 10px; */
+    /* border-color: #001453;
+    border-style: solid; */
+}
+.swiper-slide{
+    width: 100%;
+}
+.swiper-slide img{
+    height: 500px;
+    width: 700px;
+}
+
+.wewe{
+    transition: 1s;
+}
+
+.accordion{
+    min-width: 1600px;;
+    padding-left: 170px;
+    padding-right: 170px;
+}
+
+.acc-laber{
+    display: flex;
+    min-height: 68px;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.acc-box{
+    max-height: 97px;
+    overflow: hidden;
+    transition: 1s;
+    
+}
+
+
+
+.acc-laber h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.acc-laber{
+    cursor: pointer;
+    position: relative;
+    border-bottom-width: 2px;
+}
+
+.acc-content{
+    max-width: 882px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+}
+
+.acc-box.active{
+    max-height: 500px;
+    transition: 1s;
+}
+
+.acc-laber::before{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: 500;
+    transition: 1s;
+    transform-origin: center;
+}
+.acc-box.active .acc-laber::before{
+    transform: rotate(-135deg);
+    transform-origin: center;
+}
+
+.footer-item2{
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-item2 b{
+
+}
+
+.footer-item2 a{
+    
 }
